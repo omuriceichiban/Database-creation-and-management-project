@@ -1,0 +1,1216 @@
+﻿------------ SHOPS VALUES --------------------------
+
+
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100000', 'BK Tacos', '2680 N 1st Ave', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES 
+    ('100100', 'Gentle Bens Brewing', '865 E University Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES 
+    ('100200', 'No Anchovies', '870 E University Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100300', 'McDonalds', '1711 E Speedway Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100400', ‘Taco Bell’ '1818 E Speedway Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100500', 'Miss Saigon', '1072 N Campbell Ave', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100600', 'Eegees', '243 E Speedway Blvd Ste 100', 'Tucson', 'AZ', '85705');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100700', 'Sonic Drive-In', '2222 E Broadway Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO SHOPS (ShopID, Shop_Name, Street, City, states, Zipcode) VALUES
+    ('100800', 'Starbucks', '203 E Speedway Blvd', 'Tucson', 'AZ','85705');
+
+
+
+
+SELECT * FROM SHOPS; 
+
+
+commit; 
+
+
+---------------------------
+
+
+------------------- ACCOUNTS VALUES ----------------------------------------
+
+
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000100', '5203208736', 'Cheddar', 'Bob', '20-Nov-1990');---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000101', '5201234567', 'Wilbur', 'Wildcat', '12-May-1995'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000102', '5204531668', 'Joe', 'Biden', '18-Mar-1955'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000103', '5759842956', 'Donald', 'Trump', '05-Jul-1954'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000104', '5958394585', 'Max', 'John', '31-Jan-1992'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000105', '5847589553', 'Micheal', 'Myers', '31-Oct-1960'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000106', '3735699025', 'Tony', 'Stark', '10-Jun-1975'); ----Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000107', '5209784658', 'Keishaun', 'Aspaas', '23-Dec-1996'); ----DRIVER 
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000108', '5058973495', 'Payton', 'Rudnick', '03-Jan-1996'); ----DRIVER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000109', '8019328473', 'Tian', 'Zhang', '15-Feb-1996'); ----DRIVER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000110', '5203459871', 'Doug', 'Taylor', '11-Apr-1988');----DRIVER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000111', '5058924678', 'Sam', 'Feroze', '20-Nov-1990'); ----DRIVER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000112', '5203208736', 'Vin', 'Diesel', '30-Aug-1975'); ---Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000113', '6573459184', 'Bruce', 'Banner', '26-Mar-1978'); ---Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000114', '8172014589', 'Justin', 'Joe', '28-Jul-1980'); ---CUSTOMER
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000115', '5121119863', 'Steve', 'Rodgers', '24-Oct-1935'); ----Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000116', '5201237854', 'Scott', 'Lang', '02-Apr-1975'); ----Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000117', '5753458790', 'Peter', 'Parker', '13-Mar-1994'); ----Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000118', '8187892345', 'Han', 'Solo', '10-Jun-1955'); ----Manager
+INSERT INTO ACCOUNTS (Acct_num, phone_num, fname, lname, DOB) VALUES
+    ('000119', '2558019863', 'Mike', 'Trout', '19-Mar-1984'); ---Manager
+    
+    
+SELECT * FROM ACCOUNTS; 
+
+
+commit;
+
+
+DELETE FROM ACCOUNTS; 
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------ACCT_emails ------------------------------------------
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000100','cheddarbob@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000100','cbob08@email.com');
+
+
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000101','wilburwildcat@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000102','joebiden@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000103','donaldtrump@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000104','johnmax@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000104','johnmax2018@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000105','myersmichael@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000106','ironman@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000107','keishaunaspaas@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000108','paytonrudnick@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000109','tianzhang@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000110','dougtaylor@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000111','samferoze@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000112','vindiesel@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000113','brucebanner@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000114','justinjoe@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000115','steverodgers@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000116','scottlang@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000117','peterparker@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000118','hansolo@email.com');
+INSERT INTO Acct_emails (Acct_num, email) VALUES
+    ('000119','miketrout@email.com');
+    
+SELECT * FROM ACCT_EMAILS; 
+commit;
+
+
+DELETE FROM ACCT_EMAILS; 
+--------------------------
+
+
+
+
+---------------------------- MENU_ITEMS VALUES ------------------------------
+SELECT * FROM MENU_ITEM; 
+
+
+
+
+---BK Tacos---
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, Shopid, avail_type) VALUES
+    ('500001', 'Burros', 'None', '$9.00', 'Mexican', 100000, 004);
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500002', 'Tacos', 'None', '$4.00', 'Mexican', 100000, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500003', 'Hot Dogs', 'None', '$6.00', 'Mexican', 100000, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500004', 'Quesadillas', 'None', '$7.50', 'Mexican', 100000, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500005', 'Hamburgers', 'None', '$8.00', 'Mexican', 100000, '004');
+    
+---Gentle Bens Brewing---
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500101', ' Bens Omelets', 'Gluten-free', '$9.00', 'American', 100100, '001');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500102', ' Traditional Breakfast', 'None', '$7.00', 'American', 100100, '001');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500103', ' Ceaser Salad', 'None', '$11.50', 'American', 100100, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500104', 'BYO Burger', 'None', '$13.00', 'American', 100100, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500105', 'Baja Tacos', 'None', '$13.50', 'American', 100100, '004');
+    
+---No Anchoies---
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500201', 'One-Topping Slice', 'None', '$3.75', 'Italian', '100200', '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500202', 'Specialty Slice', 'None', '$4.75', 'Italian', '100200', '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500203', 'House Salad', 'None', '$4.00', 'Italian', '100200', '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500204', 'Plain Fries', 'None', '$5.00', 'Italian', '100200', '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500205', 'Boneless Wings (8pc)', 'None', '$9.50', 'Italian', 100200, '004');
+    
+---Mcdonalds--- 
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500301', 'Big MAC Meal', 'None', '$9.00', 'American', 100300, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500302', 'Quarter Pounder Meal', 'None', '$7.00', 'American', 100300, '004'); 
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500303', 'McNuggets (10pc) Meal', 'None', '$8.00', 'American', 100300, '004');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500304', 'Egg McMuffin Meal', 'None', '$5.00', 'American', 100300, '001');
+INSERT INTO MENU_ITEM (item_num, item_name, allergens, price, category, shopid, avail_type) VALUES
+    ('500305', 'Chicken Sandwhich Meal', 'None', '$9.00', 'American', 100300, '004');
+
+
+
+
+------------------------------
+
+
+
+
+
+
+-------------------------- CUSTOMER VALUES ----------------------------------------------------------
+SELECT * FROM CUSTOMERS;
+
+
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000100, 'Y', '3', '2020 University Blvd', 'Tucson', 'AZ', '85719');
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000101, 'Y', '2', '1812 Wildcat Ave', 'Tucson', 'AZ', '85719');
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000102, 'Y', '5', '3684 Cherry Ave', 'Tucson', 'AZ', '85719');
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000103, 'Y', '4', '2016 Speedway Blvd', 'Tucson', 'AZ', '85705');
+    INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000104, 'N', '1', '0531 Grant Road', 'Tucson', 'AZ', '85705');
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000105, 'N', '1', '2308 North Campbell Ave', 'Tucson', 'AZ', '85719');
+INSERT INTO CUSTOMERS (Acct_num, UberEatsPass, Customer_Lvl, Street, City, State, Zipcode) VALUES
+    (000114, 'Y', '4', '4564 East Helen St', 'Tucson', 'AZ', '85719');
+
+
+commit;
+
+
+-------------------------------- Driver Values -----------------------------------------------------
+
+
+SELECT * FROM DRIVERS; 
+
+
+INSERT INTO  DRIVERS (Acct_num, Drivers_License, Background_check, Profile_Photo, SSN, total_earnings) VALUES
+    ('000107', 'Y', 'Y', 'Y', '234-56-7694', ‘75’);
+INSERT INTO  DRIVERS (Acct_num, Drivers_License, Background_check, Profile_Photo, SSN, total_earnings) VALUES
+    (000108, 'Y', 'Y', 'Y', '937-68-2816', 50);
+INSERT INTO  DRIVERS (Acct_num, Drivers_License, Background_check, Profile_Photo, SSN, total_earnings) VALUES
+    (000109, 'Y', 'Y', 'Y', '773-89-2018', 200);
+INSERT INTO  DRIVERS (Acct_num, Drivers_License, Background_check, Profile_Photo, SSN, total_earnings) VALUES
+    (000110, 'Y', 'Y', 'Y', '915-23-2947', 150);
+INSERT INTO  DRIVERS (Acct_num, Drivers_License, Background_check, Profile_Photo, SSN, total_earnings) VALUES
+    (000111, 'Y', 'Y', 'Y', '195-88-2823', 75);
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------- SHOP MANAGERS -------------------------------------
+-------NOT WORKING YET 
+
+
+------TRIGGER 
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (106,500001);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (106,500002);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (106,500003);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (106,500004);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (106,500005);
+/* Shop manager = 000106 (Tony Stark) Shop name = BK Tacos */
+
+
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (112,500101);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (112,500102);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (112,500103);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (112,500104);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (112,500105);
+/* Shop manager = 000112 (Vin Diesel) Shop name = BK Tacos */
+
+
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (113,500201);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (113,500202);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (113,500203);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (113,500204);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (113,500205);
+
+
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (115,500301);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (115,500302);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (115,500303);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (115,500304);
+INSERT INTO SHOP_MANAGER (ACCT_NUM, ITEM_NUM) VALUES (115,500305);
+
+
+
+
+
+
+------------------- VEHICLES VALUES ------------------------------------------
+SELECT * FROM VEHICLES;
+
+
+INSERT INTO VEHICLES (Vin_num, Insurance, Inspection, Registration) VALUES
+    ('1HTSDPPN3PH539119', 'Y', 'Y', 'Y');
+INSERT INTO VEHICLES (Vin_num, Insurance, Inspection, Registration) VALUES
+    ('1WBAKF5C56BE56535', 'Y', 'Y', 'Y');
+INSERT INTO VEHICLES (Vin_num, Insurance, Inspection, Registration) VALUES
+    ('JH4KB16505C031376', 'Y', 'Y', 'Y');
+INSERT INTO VEHICLES (Vin_num, Insurance, Inspection, Registration) VALUES
+    ('1D7HU18216S617333', 'Y', 'Y', 'Y');
+INSERT INTO VEHICLES (Vin_num, Insurance, Inspection, Registration) VALUES
+    ('2LMDJ8JK8DBL08776', 'Y', 'Y', 'Y');
+
+
+
+
+
+
+--------------------- TAX VALUES --------------------------------
+SELECT * FROM TAX;
+
+
+INSERT INTO TAX (Zip, Tax) VALUES ('85719', '0.05');
+INSERT INTO TAX (Zip, Tax) VALUES ('85705', '0.04');
+
+
+
+
+
+
+
+
+----------------- ORDERS VALUES --------------------------------
+
+
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15000', '000100', '100000', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N','000107');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15001','000101', '100100',  '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000108');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15002', '000102', '100200', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000109');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15003',  '000103', '100300', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000110');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15004',  '000104', '100100', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000111');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15005',  '000105', '100200', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000107');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15006',  '000114', '100300', '12-Nov-2020', 'Approve', 'null', '12-Nov-2020', 'Y', 'N', 'N', '000108');
+
+
+
+
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15007',  '000100', '100300', '13-Nov-2020', 'Approve', 'null', '13-Nov-2020', 'Y', 'N', 'N', '000109');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15008',  '000101', '100200', '13-Nov-2020', 'Approve', 'null', '13-Nov-2020', 'Y', 'N', 'N', '000110');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15009',  '000102', '100100', '13-Nov-2020', 'Approve', 'null', '13-Nov-2020', 'Y', 'N', 'N', '000111');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15010',  '000103', '100000', '13-Nov-2020', 'Approve', 'null', '13-Nov-2020', 'Y', 'N', 'N', '000107');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15011',  '000104', '100300', '14-Nov-2020', 'Approve', 'null', '14-Nov-2020', 'Y', 'N', 'N', '000108');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15012',  '000105', '100200', '14-Nov-2020', 'Approve', 'null', '14-Nov-2020', 'Y', 'N', 'N', '000109');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('15013',  '000114', '100100', '14-Nov-2020', 'Approve', 'null', '14-Nov-2020', 'Y', 'N', 'N', '000110');
+    
+
+
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16020',  '000100', '100100', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000109');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16021',  '000101', '100300', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000110');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16022',  '000102', '100000', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000111');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16023',  '000103', '100000', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000107');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16024',  '000104', '100300', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000108');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16025',  '000105', '100200', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000109');
+INSERT INTO ORDERS (Order_num, Acct_num, ShopID, Order_time, Status, Coupon, Delivery_time, Is_Delivery, Is_Pickup, Is_Dinein, Driver_num) 
+    VALUES ('16026',  '000114', '100100', '01-Dec-2020', 'Approve', 'null', '01-Dec-2020', 'Y', 'N', 'N', '000110');
+    
+    
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+-----------Card-------------
+
+
+insert into card (card_num,exp_date,security_code,acct_num) values (895126635412,'07/22',845,100);
+insert into card (card_num,exp_date,security_code,acct_num) values (484721887452,'11/21',845,101);
+insert into card (card_num,exp_date,security_code,acct_num) values (579452165125,'01/23',134,102);
+insert into card (card_num,exp_date,security_code,acct_num) values (975125472354,'06/21',874,103);
+insert into card (card_num,exp_date,security_code,acct_num) values (775321542354,'02/25',624,104);
+insert into card (card_num,exp_date,security_code,acct_num) values (374284568456,'12/21',672,105);
+insert into card (card_num,exp_date,security_code,acct_num) values (484512387566,'01/24',922,114);
+
+
+
+
+
+
+-----------Customer_Deliver_L--------- ----
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (100,’11201 N Tatum Blvd Ste 300’, ‘Phoenix’, ‘AZ’, 85001);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (101,’1260 E Tucson Marketplace Blvd’,’Tucson’, ‘AZ’, 85713);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (102,’1013 E University Blvd’, ‘Tucson’, ‘AZ’,85721);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (103, ‘4075 W Ina Rd’, ‘Tucson, ‘AZ’,85741);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (104,’7876 N Oracle Rd’, ‘Oro Valley’, ‘AZ’, 85704);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (105, ‘2150 N Alvernon Way’, ‘Tucson’, ‘AZ’, 85712);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (114, ‘2162 W Speedway Blvd’, ‘Tucson’, ‘AZ’,85745);
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (100, 'McClelland Hall 1130 E Helen St', 'Tucson', 'AZ', '85721');
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (101, '1721 E Enke Dr', 'Tucson', 'AZ', '85721');   
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (102, '822 East 5th Street', 'Tucson', 'AZ', '85719');    
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (103, '940 4th St', 'Tucson', 'AZ' '85719');
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (104, '000104', '1003 N Olive Rd', 'Tucson', 'AZ', '85719'); 
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (105, '1440 East 4th St', 'Tucson', 'AZ', '85719');  
+insert into customer_Deliver_L (acct_num,street,city,state,zipcode) values (114, '601 N Highland Ave', 'Tucson', 'AZ', '85719'); 
+
+
+
+
+
+
+------------------------------------------------
+
+
+--------------DELIVERY ADDRESS ------------------------------------- (Error with Acct_num FK) 
+---NOT INSERTED YET (waiting on ORDERS) 
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15000', '000100', 'McClelland Hall 1130 E Helen St', 'Tucson', 'AZ', '85721');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15001', '000101', '1721 E Enke Dr', 'Tucson', 'AZ', '85721');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15002', '000102', '822 East 5th Street', 'Tucson', 'AZ', '85719');    
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15003', '000103', '940 4th St', 'Tucson', 'AZ', '85719');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15004', '000104', '1003 N Olive Rd', 'Tucson', 'AZ', '85719');    
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15005', '000105', '1440 East 4th St', 'Tucson', 'AZ', '85719');     
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15006', '000114', '601 N Highland Ave', 'Tucson', 'AZ', '85719'); 
+    
+
+
+
+
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15007',  '000100', 'McClelland Hall 1130 E Helen St', 'Tucson', 'AZ', '85721');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15008',  '000101', '1721 E Enke Dr', 'Tucson', 'AZ', '85721');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15009',  '000102', '822 East 5th Street', 'Tucson', 'AZ', '85719');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15010',  '000103', '940 4th St', 'Tucson', 'AZ', '85719');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15011',  '000104', '1003 N Olive Rd', 'Tucson', 'AZ', '85719');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15012',  '000105', '1440 East 4th St', 'Tucson', 'AZ', '85719');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('15013',  '000114', '601 N Highland Ave', 'Tucson', 'AZ', '85719'); 
+
+
+
+
+
+
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16020',  '000100', 'McClelland Hall 1130 E Helen St', 'Tucson', 'AZ', '85721');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16021',  '000101', '1721 E Enke Dr', 'Tucson', 'AZ', '85721');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16022',  '000102', '822 East 5th Street', 'Tucson', 'AZ', '85719');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16023',  '000103', '940 4th St', 'Tucson', 'AZ', '85719');
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16024',  '000104', '1003 N Olive Rd', 'Tucson', 'AZ', '85719');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16025',  '000105', '1440 East 4th St', 'Tucson', 'AZ', '85719');   
+INSERT INTO delivery_address (order_num, Acct_num, Street, City, State, Zipcode) VALUES 
+    ('16026',  '000114', '601 N Highland Ave', 'Tucson', 'AZ', '85719'); 
+
+
+---------------------------------------------------------------
+BUILDINGS
+
+
+CREATE SEQUENCE buildingID_seq
+    START WITH 1
+    MAXVALUE 99999;
+
+
+CREATE OR REPLACE TRIGGER buildingID_trig
+    BEFORE INSERT
+    ON BUILDINGS
+    FOR EACH ROW
+    
+DECLARE
+    temp_ID buildings.buildingid%type;
+
+
+BEGIN
+    SELECT buildingid_seq.nextval INTO temp_ID FROM dual;
+    :new.buildingid := temp_ID;
+END;
+/
+
+
+
+
+INSERT INTO BUILDINGS VALUES ('001', '239 Causeway St', 'Boston', 'MA', '02114');
+INSERT INTO BUILDINGS VALUES ('002', '400 W 15th St', 'Austin', 'TX', '78701');
+INSERT INTO BUILDINGS VALUES ('003', '201 17th St', 'Atlanta', 'GA', '30363');
+INSERT INTO BUILDINGS VALUES ('004', '111 N Canal St', 'Chicago', 'IL', '60606');
+INSERT INTO BUILDINGS VALUES ('005', '4665A Paris St', 'Denver', 'CO', '80239');
+INSERT INTO BUILDINGS VALUES ('006', '1801 N Lamar St, Ste 130', 'Dallas', 'TX', '75202');
+INSERT INTO BUILDINGS VALUES ('007', '145 S Spring St', 'Los Angeles', 'CA', '90012');
+INSERT INTO BUILDINGS VALUES ('008', '1733 Ocean Ave', 'Santa Monica', 'CA', '90401');
+INSERT INTO BUILDINGS VALUES ('009', '80 SW 8th St', 'Miami', 'FL', '33130');
+INSERT INTO BUILDINGS VALUES ('010', '636 W 28th St', 'New York', 'NY', '10001');
+INSERT INTO BUILDINGS VALUES ('011', '1414 W Broadway Rd', 'Phoenix', 'AZ', '85282');
+INSERT INTO BUILDINGS VALUES ('012', '50 33rd St', 'Pittsburgh', 'PA', '15201');
+INSERT INTO BUILDINGS VALUES ('013', '1455 Market St', 'San Francisco', 'CA', '94103');
+INSERT INTO BUILDINGS VALUES ('014', '1191 2nd Ave', 'Seattle', 'WA', '98101');
+INSERT INTO BUILDINGS VALUES ('015', '1717 Rhode Island Ave NW', 'Washington', 'DC', '20036');
+
+
+ALTER TABLE BUILDINGS
+    MODIFY STREET VARCHAR2(30);
+
+
+ALTER TABLE BUILDINGS
+    MODIFY CITY VARCHAR2(20);
+    
+commit;
+
+
+select * from buildings;
+
+
+UBER_EMPLOYEES
+
+
+CREATE SEQUENCE employeeID_seq
+    START WITH 100
+    MAXVALUE 99999;
+
+
+CREATE OR REPLACE TRIGGER employeeID_trig
+    BEFORE INSERT
+    ON UBER_EMPLOYEES
+    FOR EACH ROW
+    
+DECLARE
+    temp_ID uber_employees.employeeid%type;
+
+
+BEGIN
+    SELECT employeeid_seq.nextval INTO temp_ID FROM dual;
+    :new.employeeid := temp_ID;
+END;
+/
+
+
+
+
+INSERT INTO UBER_EMPLOYEES VALUES ('111', '111111111', 'John', 'Elway', '40000', '06/aug/2020', '001');
+INSERT INTO UBER_EMPLOYEES VALUES ('222', '222222222', 'Drew', 'Brees', '60000', '01/aug/2020', '001');
+INSERT INTO UBER_EMPLOYEES VALUES ('333', '333333333', 'Patrick', 'Mahomes', '30000', '01/sep/2020', '001');
+INSERT INTO UBER_EMPLOYEES VALUES ('444', '444444444', 'Tom', 'Brady', '90000', '01/aug/2020', '001');
+INSERT INTO UBER_EMPLOYEES VALUES ('555', '555555555', 'Drew', 'Bledsoe', '50000', '15/aug/2020', '002');
+INSERT INTO UBER_EMPLOYEES VALUES ('666', '666666666', 'Aaron', 'Rodgers', '43000', '22/sep/2020', '002');
+INSERT INTO UBER_EMPLOYEES VALUES ('777', '777777777', 'Peyton', 'Manning', '40000', '30/aug/2020', '002');
+INSERT INTO UBER_EMPLOYEES VALUES ('888', '888888888', 'Brett', 'Favre', '84000', '01/aug/2020', '002');
+INSERT INTO UBER_EMPLOYEES VALUES ('999', '999999999', 'Joe', 'Montana', '70000', '15/aug/2020', '003');
+INSERT INTO UBER_EMPLOYEES VALUES ('100', '122121222', 'Dan', 'Marino', '48000', '25/aug/2020', '003');
+INSERT INTO UBER_EMPLOYEES VALUES ('200', '211212111', 'Ben', 'Roethlisberger', '34000', '01/sep/2020', '003');
+INSERT INTO UBER_EMPLOYEES VALUES ('300', '331313331', 'Johnny', 'Unitas', '45000', '16/aug/2020', '003');
+INSERT INTO UBER_EMPLOYEES VALUES ('400', '414141414', 'Philip', 'Rivers', '80000', '12/aug/2020', '004');
+INSERT INTO UBER_EMPLOYEES VALUES ('500', '551155511', 'Russell', 'Wilson', '60000', '01/aug/2020', '004');
+INSERT INTO UBER_EMPLOYEES VALUES ('600', '600606000', 'Roger', 'Staubach', '75000', '20/aug/2020', '004');
+INSERT INTO UBER_EMPLOYEES VALUES ('700', '700707000', 'Bart', 'Starr', '62000', '15/aug/2020', '004');
+INSERT INTO UBER_EMPLOYEES VALUES ('800', '880880088', 'Warren', 'Moon', '54000', '01/aug/2020', '005');
+INSERT INTO UBER_EMPLOYEES VALUES ('900', '990990009', 'Terry', 'Bradshaw', '85000', '19/sep/2020', '005');
+INSERT INTO UBER_EMPLOYEES VALUES ('121', '135974256', 'Fran', 'Tarkenton', '40000', '15/aug/2020', '005');
+INSERT INTO UBER_EMPLOYEES VALUES ('132', '579631547', 'Jim', 'Kelly', '36000', '09/aug/2020', '005');
+
+
+Commit;
+
+
+select * from uber_employees;
+
+
+UBER_EMPLOYEES_TECH
+
+
+ALTER TABLE uber_employees_tech
+    MODIFY skills VARCHAR2(30);
+
+
+INSERT INTO uber_employees_tech VALUES ('101', 'SQL, Python');
+INSERT INTO uber_employees_tech VALUES ('102', 'C#, C++');
+INSERT INTO uber_employees_tech VALUES ('104', 'IOS/Android Software');
+INSERT INTO uber_employees_tech VALUES ('105', 'Design/Implementation');
+INSERT INTO uber_employees_tech VALUES ('109', 'CMS, SEO, Analytics');
+INSERT INTO uber_employees_tech VALUES ('111', 'UI Design');
+INSERT INTO uber_employees_tech VALUES ('114', 'Programming');
+INSERT INTO uber_employees_tech VALUES ('115', 'Algorithms');
+INSERT INTO uber_employees_tech VALUES ('116', 'Logistic Mgmt Software');
+INSERT INTO uber_employees_tech VALUES ('118', 'Digital Media');
+
+
+select* from uber_employees_tech;
+
+
+commit;
+
+
+UBER_EMPLOYEES_OFFICE
+
+
+INSERT INTO uber_employees_office VALUES ('100');
+INSERT INTO uber_employees_office VALUES ('106');
+INSERT INTO uber_employees_office VALUES ('110');
+INSERT INTO uber_employees_office VALUES ('113');
+INSERT INTO uber_employees_office VALUES ('119');
+
+
+select* from uber_employees_office;
+
+
+commit;
+
+
+UBER_EMPLOYEES_CLEVEL
+
+
+INSERT INTO uber_employees_clevel VALUES ('103', 'CEO');
+INSERT INTO uber_employees_clevel VALUES ('107', 'CFO');
+INSERT INTO uber_employees_clevel VALUES ('108', 'CTO');
+INSERT INTO uber_employees_clevel VALUES ('112', 'CIO');
+INSERT INTO uber_employees_clevel VALUES ('117', 'COO');
+
+
+SELECT* FROM uber_employees_clevel;
+
+
+commit;
+
+
+R_DTEAM
+CREATE SEQUENCE RD_teamID_SEQ
+    START WITH 1001
+    MAXVALUE 9999;
+
+
+CREATE OR REPLACE TRIGGER RD_teamID_seq_Trig
+    BEFORE INSERT
+    ON R_Dteam
+    FOR EACH ROW
+    
+DECLARE
+    temp_ID r_dteam.teamid%type;
+
+
+BEGIN
+    SELECT RD_teamID_SEQ.nextval INTO temp_ID FROM dual;
+    :new.teamid := temp_ID;
+END;
+/
+
+
+INSERT INTO r_dteam VALUES ('1001', 'Think Tank');
+INSERT INTO r_dteam VALUES ('1002', 'Strategy');
+INSERT INTO r_dteam VALUES ('1003', 'User Exp Design');
+INSERT INTO r_dteam VALUES ('1004', 'Front-End Tech Stack');
+INSERT INTO r_dteam VALUES ('1005', 'Back-End Tech Stack');
+INSERT INTO r_dteam VALUES ('1006', 'Development');
+INSERT INTO r_dteam VALUES ('1007', 'Deployment');
+INSERT INTO r_dteam VALUES ('1008', 'Monitor/Analytics');
+
+
+select* from r_dteam;
+
+
+Commit;
+
+
+
+
+
+
+----------------------- RATINGS VALUES ------------------------------
+
+
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15000', 4, 'Good Service'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15001', 5, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15002', 5, null);
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15003', 4, null);
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15004', 5, null);
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15005', 2, 'Cold food'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15006', 1, 'Took to long'); 
+
+
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15007', 5, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15008', 4, 'fast delivery'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15009', 4, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15010', 3, 'food kind of cold'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15011', 3, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15012', 5, 'Good food'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('15013', 5, null); 
+
+
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16020', 1, 'messy food'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16021', 4, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16022', 3, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16023', 5, 'Good Service'); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16024', 4, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16025', 5, null); 
+INSERT INTO Ratings (Order_num, rating, add_description) VALUES ('16026', 5, 'Food still hot'); 
+
+
+    
+---------------------------
+
+
+---------------------DRIVE VALUES -------------------------------
+
+
+INSERT INTO DRIVE (vin_num, Driver_num) VALUES ('1HTSDPPN3PH539119', '107'); 
+INSERT INTO DRIVE (vin_num, Driver_num) VALUES ('1WBAKF5C56BE56535', '108'); 
+INSERT INTO DRIVE (vin_num, Driver_num) VALUES ('JH4KB16505C031376', '109'); 
+INSERT INTO DRIVE (vin_num, Driver_num) VALUES ('1D7HU18216S617333', '110'); 
+INSERT INTO DRIVE (vin_num, Driver_num) VALUES ('2LMDJ8JK8DBL08776', '111'); 
+
+
+
+
+
+
+-------------------- Order_Details ------------------------------
+
+
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15000', 1, null, '500001'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15001', 1, null, '500102'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15002', 1, null, '500201');
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15003', 1, null, '500301');
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15004', 1, null, '500103');
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15005', 1, null, '500202'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15006', 1, null, '500302'); 
+
+
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15007', 1, null, '500301'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15008', 1, null, '500203'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15009', 1, null, '500104'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15010', 1, null, '500002'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15011', 1, null, '500303'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('15012', 1, null, '500204'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num)
+    VALUES ('15013', 1, null, '500105'); 
+
+
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16020', 1, null, '500102'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16021', 1, null, '500304'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16022', 1, null, '500003'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16023', 1, null, '500004'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16024', 1, null, '500305'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16025', 1, null, '500205'); 
+INSERT INTO Order_Details (Order_num, Quantity, notes, Item_num) 
+    VALUES ('16026', 1, null, '500103'); 
+
+
+
+
+
+
+---------------- DISCOUNT VALUES -------------------------------
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (1,    ,‘07012019-12212020’,’Tucson’, 0.05);
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (2,    ,‘12252019-12212020        ’,’Tucson’, 0.1);
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (3,    ,’11152020-12302020’,’Tucson’, 0.2);
+
+
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (4,    ,‘07012019-12212020’,’Phoenix’, 0.05);
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (5,    ,‘07012019-12212020’,’Phoenix’, 0.05);
+
+
+INSERT INTO Discount (Disc_num, Disc_Precent, period, region) VALUES (6,    ,‘07012019-12212020’,’Phoenix’, 0.05);
+
+
+
+
+---------------- Order_May_Have_Discount VALUES -------------------------------
+
+
+INSERT INTO Order_May_Have_Discount (Order_num, Disc_num) VALUES (15004, 2 );
+INSERT INTO Order_May_Have_Discount (Order_num, Disc_num) VALUES (15009, 3 );
+INSERT INTO Order_May_Have_Discount (Order_num, Disc_num) VALUES (15011, 1 );
+INSERT INTO Order_May_Have_Discount (Order_num, Disc_num) VALUES (16021, 2 );
+INSERT INTO Order_May_Have_Discount (Order_num, Disc_num) VALUES (16024, 2 );
+
+
+---------------- PAYMENTS VALUES -------------------------------
+
+
+--Row 1
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115000',4.1,to_date('12-Nov-20', 'DD-MON-RR'),15000,21);
+--Row 2
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115001',5.46,to_date('12-Nov-20', 'DD-MON-RR'),15001,34.6);
+--Row 3
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115002',7.59,to_date('12-Nov-20', 'DD-MON-RR'),15002,55.9);
+--Row 4
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115003',4.05,to_date('12-Nov-20', 'DD-MON-RR'),15003,20.5);
+--Row 5
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115004',5.78,to_date('12-Nov-20', 'DD-MON-RR'),15004,37.8);
+--Row 6
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115005',6.08,to_date('12-Nov-20', 'DD-MON-RR'),15005,40.8);
+--Row 7
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115006',5.2,to_date('12-Nov-20', 'DD-MON-RR'),15006,32);
+--Row 8
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115007',3.56,to_date('13-Nov-20', 'DD-MON-RR'),15007,15.6);
+--Row 9
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115008',10.9,to_date('13-Nov-20', 'DD-MON-RR'),15008,89);
+--Row 10
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115009',4.6,to_date('13-Nov-20', 'DD-MON-RR'),15009,26);
+--Row 11
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115010',5.12,to_date('13-Nov-20', 'DD-MON-RR'),15010,31.2);
+--Row 12
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115011',10.4,to_date('14-Nov-20', 'DD-MON-RR'),15011,84);
+--Row 13
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115012',9.29,to_date('14-Nov-20', 'DD-MON-RR'),15012,72.9);
+--Row 14
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1115013',3.26,to_date('14-Nov-20', 'DD-MON-RR'),15013,12.6);
+--Row 15
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116020',4.35,to_date('1-Dec-20', 'DD-MON-RR'),16020,23.5);
+--Row 16
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116021',8.7,to_date('1-Dec-20', 'DD-MON-RR'),16021,67);
+--Row 17
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116022',4.96,to_date('1-Dec-20', 'DD-MON-RR'),16022,29.6);
+--Row 18
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116023',3.72,to_date('1-Dec-20', 'DD-MON-RR'),16023,17.2);
+--Row 19
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116024',3.65,to_date('1-Dec-20', 'DD-MON-RR'),16024,16.5);
+--Row 20
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116025',4.06,to_date('1-Dec-20', 'DD-MON-RR'),16025,20.6);
+--Row 21
+INSERT INTO PAYMENTS (PMT_ID, PROCESS_FEE_EARNED, PMT_TIME, ORDER_NUM, TOTAL_AMOUNT) VALUES ('1116026',5.5,to_date('1-Dec-20', 'DD-MON-RR'),16026,35);
+
+
+
+
+    
+
+
+
+
+---------------- PAY_METHOD VALUES -------------------------------
+
+
+INSERT INTO Pay_method (method, Amt_paid, Pmt_id) VALUES ('Card', ' ', ' ');
+INSERT INTO Pay_method (method, Amt_paid, Pmt_id) VALUES ('Card', ' ', ' ');
+INSERT INTO Pay_method (method, Amt_paid, Pmt_id) VALUES ('Card', ' ', ' ');
+INSERT INTO Pay_method (method, Amt_paid, Pmt_id) VALUES ('Card', ' ', ' ');
+INSERT INTO Pay_method (method, Amt_paid, Pmt_id) VALUES ('Card', ' ', ' ');
+
+
+
+
+
+
+
+
+------------------ EARNING_HISTORY VALUES -------------------------
+
+
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('NOV', '1952', '107');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('NOV', '2213', '108');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('NOV', '1289', '109');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('NOV', '1746', '110');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('NOV', '2468', '111');
+
+
+
+
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Oct', '224', '107');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Oct', '1007', '108');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Oct', '416', '109');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Oct', '36', '110');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Oct', '326', '111');
+
+
+
+
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Sept', '734', '107');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Sept', '94', '108');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Sept', '112', '109');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Sept', '66', '110');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Sept', '274', '111');
+
+
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Aug', '734', '107');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Aug', '94', '108');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Aug', '112', '109');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Aug', '66', '110');
+INSERT INTO Earning_History (Period, Amt_paid, Acct_num) VALUES ('Aug', '274', '111');
+
+
+COMMIT;
+
+
+
+
+
+
+
+
+
+
+--------------------- Monitor VALUES --------------------------------
+
+
+----Customers Accounts
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (100 ,106); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (101 ,106); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (102 ,106); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (103,106); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (104,100);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (105 ,100);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (114 ,100);
+
+
+----Drivers Accounts
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (107 ,110); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (108 ,110);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (109 ,110);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (110 ,110);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (111 ,110);
+
+
+
+
+-Shop Managers Accounts 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (112 ,113); 
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (113 ,113);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (115 ,113);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (116 ,113);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (117 ,119);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (118 ,119);
+INSERT INTO Monitor (Acct_num, EmployeeID) VALUES (119 ,119);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------ CALL_CENTER ------------------------------------ 
+
+
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES (1, '5201234567', '10:00', '10:15', 'Account', 'cannot login', 'Resolved', '12-AUG-2020'); ---Cust_Acct 101
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES (2, '5204531668', '10:05', '10:25', 'Order', 'Did not recieve food', 'Resolved', '13-AUG-2020'); ---Cust_Acct 102  
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (3, '5759842956', '10:30', '10:35', 'Payment', 'Updating payment method', 'Resolved', '13-AUG-2020'); ---Cust_Acct 103
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (4, '5958394585','10:35', '10:55', 'Order', 'time tracking not working', 'Resolved', '17-AUG-2020');  ---Cust_Acct 104
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (5, '5209784658', '11:00', '11:10', 'Payment', 'Error on card information', 'Resolved', '30-AUG-2020');  ---Cust_Acct 107
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (6, '5058973495', '11:30', '12:00', 'Account', 'Setting up new shop', 'Resolved', '02-SEP-2020');  ---Cust_Acct 108   
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (7, '5203459871', '13:20', '13:45', 'Order', 'Lost order, requesting refund', 'Resolved', '06-SEP-2020');  ---Cust_Acct 110  
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (8, '5121119863', '14:10', '14:25', 'Account', 'Asking how to payment information', 'Resolved', '14-SEP-2020');  ---Cust_Acct 115
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (9, '8187892345', '15:05', '15:25', 'Account', 'How to add menu items', 'Resolved', '25-SEP-2020');  ---Cust_Acct 118
+INSERT INTO CALL_CENTER (issue_num, phonenum_used, Start_At, End_At, Issue_Type, Issue_Detail, Status, Call_Date) 
+    VALUES  (10, '2558019863', '15:30', '16:00', 'Account', 'How to update menu items', 'Resolved', '01-OCT-2020');  ---Cust_Acct 119
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+----------------------------- Receive_Calls VALUES -------------------------
+----- CANNOT INSERT UNTIL CALL_CENTER IS COMPLETED 
+
+
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (1,100); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (2, 106); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (3, 110); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (4, 113); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (5, 119); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (6, 100); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (7, 110); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (8, 106); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (9, 113); 
+INSERT INTO RECEIVE_CALLS (Issue_num, EmployeeID) VALUES (10,119); 
+
+
+
+
+----------------------- Uber_Emp_Office_Lang ------------------------------------ 
+
+
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('English', 100); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Spanish', 100); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('English', 106); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Spanish', 106);
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('English', 110); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Spanish', 110);
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Mandarin', 110); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('English', 113); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('English', 119); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Spanish', 119); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Hindi', 119); 
+INSERT INTO Uber_Emp_Office_Lang (languages, employeeID) VALUES ('Arabic', 119); 
+
+
+
+
+------------------------ R_DTeam_Projects -----------------------------
+Alter table R_DTeam_Projects Modify (Project_name varchar(40));
+
+
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1001, 2001, 'Internal Operation Plan'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1002, 2002, '2021 brand strategy'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1003, 2003, 'Customer App redesign'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1004, 2004, 'Web restructuring design plan');
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1005, 2005, 'Software design patching'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1006, 2006, 'Marketing Development plan for 2021'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1007, 2007, 'Employee Training Deployment Plan'); 
+INSERT INTO R_DTeam_Projects (teamid, projectID, Project_name) VALUES (1008, 2008, 'Year End Analytics Evaluation'); 
+
+
+
+
+------------------- R_DTeamOffice -----------------------------
+
+
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1001, 100);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1002, 106);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1003, 110);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1004, 113);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1005, 119);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1006, 100);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1007, 106);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1008, 110);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1002, 113);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1004, 119);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1006, 113);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1008, 106);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1001, 110);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1003, 113);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1005, 106);
+INSERT INTO R_DTeamOffice (teamid, employeeID) VALUES (1007, 100);
+
+
+
+
+------------------- R_DTeamTech -----------------------------
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 101);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 102);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 104);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 105);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 109);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1001, 111);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 114);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 115);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 116);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 118);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 101);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1002, 102);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 104);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 105);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 109);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 111);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 114);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1003, 115);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 116);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 118);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 101);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 102);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 104);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1004, 105);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 109);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 111);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 114);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 115);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 116);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1005, 118);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 101);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 102);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 104);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 105);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 109);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1006, 111);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 114);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 115);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 116);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 118);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 101);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1007, 102);
+
+
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 104);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 105);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 109);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 111);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 114);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 115);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 116);
+INSERT INTO R_DTeamTech (teamid, employeeID) VALUES (1008, 118);

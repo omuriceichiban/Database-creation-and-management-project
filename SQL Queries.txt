@@ -1,0 +1,170 @@
+﻿1. Total payments per type
+
+
+select method, sum(amt_paid)
+from pay_method 
+group by method
+order by sum(amt_paid) desc;
+
+
+
+
+2. Avg ratings for shop high to low
+
+
+select shopid, to_char(avg(rating),'9.99') avg_rating
+from orders o right outer join ratings r on o.order_num = r.ORDER_NUM
+group by shopid
+order by avg(rating) desc;
+
+
+3. Avg total earnings of driver 
+create view driver_payment_info (acct_num, fname, lname, period, average_amount_paid, total_Earnings) as 
+SELECT d.acct_num, a.fname, a.lname, eh.period, AVG(eh.AMT_PAID), max(d.total_Earnings)
+FROM EARNING_HISTORY eh join drivers d on (eh.acct_num = d.acct_num)
+join accounts a on (a.acct_num = d.acct_num) 
+where period IN ('Nov', 'Oct', 'Aug')
+group by a.fname, a.lname, d.acct_num, eh.period
+having max(d.total_earnings) >= 75  ; 
+select * from driver_payment_info;
+
+
+
+
+   4. Find accounts with order time between 12-NOV-2020 AND ORDER_TIME < '01-DEC-2020' with a discount greater than 1. 
+
+WITH order_may_have_discount_sub AS
+(
+SELECT DISC_NUM, ORDER_NUM
+FROM order_may_have_discount
+)
+SELECT O.ORDER_NUM, ACCT_NUM, ORDER_TIME, STATUS, DRIVER_NUM, DISC_NUM
+FROM ORDERS O
+RIGHT OUTER JOIN ORDER_DETAILS OD
+ON O.ORDER_NUM = OD.ORDER_NUM
+RIGHT OUTER JOIN  order_may_have_discount_sub SB 
+ON SB.ORDER_NUM = OD.ORDER_NUM
+WHERE ORDER_TIME > '12-NOV-2020'
+AND ORDER_TIME < '01-DEC-2020'
+AND STATUS = 'Approve'
+AND DISC_NUM > 1
+;
+
+
+      5. Finds Item Names within the American category with a price of greater than $5.00 and orders them in ascending order according to price.
+
+create view American_Menu_Item as 
+WITH MENU_ITEM_SUB AS
+(
+SELECT ITEM_NUM, ITEM_NAME, ALLERGENS, PRICE, CATEGORY, SHOPID, AVAIL_TYPE
+FROM MENU_ITEM
+),
+AVAILABILITY_TIME_SUB AS
+(
+SELECT AVAIL_TYPE, TIME_STAMP
+FROM AVAILABILITY_TIME
+)
+SELECT shop_name,ITEM_NAME AS "Item Name", PRICE AS "Price", CATEGORY AS "Category", 
+MI.AVAIL_TYPE AS "Availability Type", TIME_STAMP AS "Time Stamp"
+FROM MENU_ITEM_SUB MI
+LEFT JOIN AVAILABILITY_TIME_SUB AT
+ON MI.AVAIL_TYPE = AT.AVAIL_TYPE
+left join shops on mi.shopid = shops.shopid
+WHERE PRICE > '$5.00'
+AND CATEGORY = 'American'
+ORDER BY PRICE ASC;
+
+
+
+
+         6. Identifying what phone calls in the call center was linked to which account. 
+
+
+create view Call_Center_Rec as 
+WITH table1 AS (
+    SELECT c.issue_num, c.phonenum_used, c.issue_type, c.issue_detail, c.status
+    FROM call_center c LEFT OUTER JOIN accounts a ON (c.phonenum_used = a.phone_num)
+    where c.status = 'Resolved' 
+),    
+table2 AS ( 
+    SELECT a.acct_num, a.phone_num
+    FROM monitor m JOIN accounts a ON (m.acct_num = a.acct_num)
+) 
+SELECT table1.issue_num, table1.phonenum_used, table1.issue_type, table1.issue_detail, table1.status, table2.acct_num
+FROM table1 LEFT OUTER JOIN table2 ON (table1.phonenum_used = table2.phone_num)
+ORDER BY issue_num desc ; 
+
+
+select * from call_center_rec;
+
+
+
+
+
+
+         7. Say you want to know the employees EmployeeID, Designation, skills, first name , last name, building location assigned to that employee (street, city, state, zip), and the specific building ID for the offices in Denver & Austin. You could use this query / view
+
+
+create view employee_skills_available (BuildingID, EmployeeID, FirstName, LastName, Street, City, State, ZipCode, Skills, Designation) as
+select b.buildingid, ue.employeeID, fname, lname, b.street, b.city, b.state, b.zipcode, coalesce(skills, 'N/A'), coalesce(designation, 'N/A')
+from buildings b join uber_employees ue on (b.buildingID = ue.buildingID)
+    LEFT OUTER JOIN UBER_EMPLOYEES_TECH UET ON (UE.EMPLOYEEID = UET.EMPLOYEEID)
+    LEFT OUTER JOIN UBER_EMPLOYEES_CLEVEL UEC ON (UE.EMPLOYEEID = UEC.EMPLOYEEID)
+    where city IN ('Austin', 'Denver')
+;
+
+
+select * from employee_skills_available;
+
+
+         8. This is Query that could be used to figure out the customer's wallet information. The final output includes the account number, uber credit, customer level, total amount, first name, and last name. 
+
+
+with acct_info as (
+select a.acct_num as "Account Number", a.fname as "First Name", a.lname as "Last Name", c.customer_lvl as "Customer Level", w.uber_credit as "Uber Credit"
+from customers c join accounts a on (a.acct_num = c.acct_num)
+join wallet w on (w.acct_num = c.acct_num)
+),
+payment_info as (
+select o.status,  p.pmt_id, p.total_amount as "Total Amount", o.acct_num as "Account Number"
+from payments p join orders o on (p.order_num = o.order_num)
+where o.status = 'Completed' 
+group by o.status, p.pmt_id, p.total_amount, o.acct_num)
+select ai."Account Number", "Uber Credit", "Customer Level", "Total Amount", "First Name", "Last Name"
+from acct_info ai join payment_info pi on (ai."Account Number" = pi."Account Number");
+
+
+
+
+
+
+
+
+         9. The following Query was made because we thought UberEats might be interested in seeing where the customers' delivery locations were located in reference to the shop locations. This would help give a better understanding of their clients needs and preferences based on where they live. 
+
+
+
+
+
+
+create view shop_distance as
+select o.order_num, s.shopID, d.acct_num as "Driver ID", s.shop_name as "Shop Name", s.street as "Shop Street", 
+o.status, o.delivery_time, da.street as "Cust Delivery Address", da.zipcode as "Cust Zipcode", d.total_Earnings as "Drivers Total Earnings"
+from drivers d join orders o on (d.acct_num = o.driver_num)
+join shops s on (o.shopID = s.shopID) 
+join delivery_address da on (da.order_num = o.order_num)  ;
+
+
+
+
+
+
+         10. Tax paid for state  
+
+
+select state, tax, 
+to_char(sum(total_amount),'$999999.99') total_tax_paid
+from tax t right outer join shops s on t.state = s.states
+left outer join orders o on s.shopid = o.shopid
+left outer join payments p on o.order_num = p.order_num
+group by state,tax;

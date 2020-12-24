@@ -1,0 +1,312 @@
+﻿Create table accounts
+(Acct_num number(15),
+phone_num number(11),  
+Fname varchar(20), 
+Lname varchar(30),
+DOB date,
+constraint Acct_pk primary key (Acct_num));
+
+
+create table ACCT_EMAILS(
+Acct_Num number(15),
+Email varchar(30),
+constraint Acct_pk1 primary key (Acct_num, Email), 
+constraint fk_AcctNum foreign key (acct_num) references accounts(acct_num)); 
+
+
+Create Table Buildings ( 
+BuildingID number(5) constraint Buildings_Pk primary key,
+street varchar(20), 
+city varchar(10), 
+state varchar(3), 
+zipcode varchar(10)
+);
+
+
+Create table ORDERS(
+
+
+Order_num number(15) not null,
+Acct_num number (15) not null,
+ShopID number(15) not null,
+Order_Time date not null,
+Status char(7) not null,
+Coupon varchar(20),
+Delivery_Time date,
+Is_Delivery char(3),
+Is_Pickup char(3),
+Is_dinein char (3),
+
+
+constraint pk_order primary key (Order_num),
+constraint fk_AcctNum1 foreign key (acct_num) references accounts(acct_num),
+constraint fk_shopID foreign key (ShopID) references shops(shopID) ON DELETE SET NULL
+--constraint status CHECK (status IN ('Approve', 'Decline'))
+
+
+);
+
+
+Create table Payments
+(
+Pmt_ID char(15), constraint payment_pk primary key (Pmt_ID),
+Process_fee_earned number(15),
+Pmt_Time date,
+Order_num number(15) constraint fk_orders references Orders(Order_num)
+);
+
+
+Create table Discount
+(
+Disc_Num char(8),  constraint disc_pk primary key (disc_num),
+Disc_precent number(4,2),
+Period varchar(10),
+Region varchar(10),
+Is_Share_Driver_Disc char(1),
+Is_Ltd_Time_Disc char(1),
+Is_Account_Disc char(1),
+Is_Same_Rest_Disc char(1) --Might need to put something that makes sure it is Y or N
+);
+
+
+Create table DELIVERY_ADDRESS (
+
+
+Order_num number(15) not null,
+Acct_num varchar(20) not null,
+Street varchar(40) not null,
+City varchar(30) not null,
+state char(3) not null,
+Zipcode number(9)not null
+
+
+constraint deladd_ordno_fk references ORDERS(Order_num)
+constraint deladd_acctno_fk references Accounts(acct_num) );
+
+
+
+
+Create Table Uber_Employees (
+employeeID number(6) constraint UberEmp_PK primary key, 
+ssn number(9),  
+fname varchar(15), 
+lname varchar(15),
+pay number(8), 
+date_started date, 
+BuildingID number(5),
+constraint BuildingID_fk foreign key (BuildingID) REFERENCES Buildings 
+); 
+
+
+Create Table Uber_Employees_CLevel( 
+employeeID number(6),
+designation varchar(15),
+constraint pk_Clevel primary key (EmployeeID),
+constraint fk_employeeID foreign key (employeeID) REFERENCES Uber_Employees(EmployeeID)
+); 
+
+
+Create Table Uber_Employees_Tech( 
+employeeID number(6),
+skills varchar(15),
+constraint pk_EmpTech primary key (EmployeeID),
+constraint fk_employeeID1 foreign key (employeeID) REFERENCES Uber_Employees(EmployeeID)
+); 
+
+
+Create Table Uber_Employees_Office( 
+employeeID number(6),
+constraint pk_Officeemp primary key (EmployeeID),
+constraint fk_employeeID2 foreign key (employeeID) REFERENCES Uber_Employees(EmployeeID)
+); 
+
+
+Create table Uber_Emp_Office_Lang(
+languages varchar(15),
+employeeID number(6),
+constraint pk_emplang primary key (EmployeeID, languages),
+constraint fk_employeeID3 foreign key (employeeID) REFERENCES Uber_Employees(EmployeeID)
+); 
+
+
+Create Table R_DTeam ( 
+TeamID number(4), 
+teamname varchar(20) Not Null,
+constraint pk_R_Dteam primary key (TeamID)
+); 
+
+
+Create Table R_DTeam_Projects ( 
+TeamID number(4), 
+projectId number(6), 
+project_name varchar(20), 
+constraint pk_R_Dteam1 primary key (TeamID, projectID),
+constraint fk_R_Dproj foreign key (TeamID) REFERENCES R_DTeam(TeamID)
+);
+
+
+--Identifying the comp relationship
+Create Table R_DTeamTech ( 
+TeamID number(4),
+EmployeeID number(6), 
+constraint R_DTeamC_PK Primary Key (TeamID, EmployeeID),
+constraint fk_R_DTeamC foreign key (TeamID) REFERENCES R_DTeam(TeamID),
+constraint fk_R_DTeamC1 foreign key (EmployeeID) REFERENCES Uber_Employees_Tech(EmployeeID)
+); 
+
+
+--Identifying the comp relationship
+Create Table R_DTeamoffice ( 
+TeamID number(4),
+EmployeeID number(6), 
+constraint R_DTeamC_PK1 Primary Key (TeamID, EmployeeID),
+constraint fk_R_DTeamC2 foreign key (TeamID) REFERENCES R_DTeam(TeamID),
+constraint fk_R_DTeamC3 foreign key (EmployeeID) REFERENCES Uber_Employees_Office(EmployeeID)
+);
+
+
+
+
+Create table Ratings
+(
+Order_num number(15),
+rating number(1),
+add_description varchar(50),
+constraint pk_rating primary key (Order_num),
+constraint fk_order foreign key (Order_num) REFERENCES Orders(Order_num)
+);
+
+
+create table customers(
+Acct_num number (15) not null,
+ubereatspass char(1), 
+customer_lvl number(1), 
+street varchar(35), 
+city varchar(15), 
+state char(2),
+zipcode varchar(10),
+constraint pk_customer primary key (acct_num),
+constraint fk_accts foreign key (acct_num) REFERENCES Accounts(acct_num)
+); 
+
+
+create table customer_deliver_L ( 
+Acct_num number (15) not null,
+street varchar(35), 
+city varchar(15), 
+state char(2),
+zipcode varchar(10),
+constraint pk_customer1 primary key (acct_num, street),
+constraint fk_accts1 foreign key (acct_num) REFERENCES Accounts(acct_num)
+);
+
+
+create table Drivers ( 
+Acct_num number(15) not null,
+Drivers_license char(1), 
+background_check char(1), 
+profile_photo char(1), 
+SSN varchar(11), 
+total_earnings number(9),
+constraint pk_driver primary key (acct_num),
+constraint driver_ssn unique (SSN),
+constraint fk_accts2 foreign key (acct_num) REFERENCES Accounts(acct_num)
+);
+
+
+create table Vehicles (
+VIN_num char(17),
+Insurance char(1),
+Inspection char(1), 
+Registration char(1), 
+constraint pk_vehicles primary key (VIN_num)
+);
+
+
+create table Drive ( 
+VIN_num char(17),
+driver_num number(15) not null,
+constraint pk_vehicles1 primary key (VIN_num),
+constraint fk_accts3 foreign key (driver_num) REFERENCES Accounts(acct_num),
+constraint fk_vehicles foreign key (VIN_num) REFERENCES Vehicles(VIN_num)
+); 
+
+
+
+
+CREATE TABLE Menu_Item(
+ Item_num NUMBER(15),
+ Item_Name VARCHAR(50) NOT NULL,
+ Allergens VARCHAR(25) NOT NULL,
+ Price VARCHAR(25) NOT NULL,
+ Category VARCHAR(25) NOT NULL,
+ ShopID number(15),
+ type number(9),
+ CONSTRAINT Menu_Item_pk PRIMARY KEY (Item_num),
+ constraint fk_shopID foreign key (ShopID) REFERENCES Shops(ShopID)
+)
+;
+
+
+CREATE TABLE Shop_Manager(
+Acct_Num NUMBER(15),
+Shopid number(15),
+CONSTRAINT PK_shopmang PRIMARY KEY (Acct_num), 
+constraint fk_shopid foreign key (shopid) REFERENCES shops(shopid),
+constraint fk_shopmanager foreign key (acct_num) REFERENCES Accounts(acct_num));
+
+
+
+
+
+
+CREATE TABLE Availability_Time(
+ Type NUMBER(9), 
+ Time_stamp VARCHAR(6) NOT NULL,
+ CONSTRAINT pk_type Primary key (Type)
+)
+;
+
+
+CREATE TABLE ORDER_DETAILS (
+Order_num number(15) not null,
+Quantity number(3) not null,
+Notes varchar (90),
+item_num number(15),
+constraint pk_order_num1 primary key (Order_num),
+constraint fk_item_num2 foreign key (item_num) REFERENCES Menu_Item(item_num)
+);
+
+
+Create Table Call_Center ( 
+Issue_Num number(5), 
+phonenum_used varchar(11), 
+start_at varchar(10), 
+end_at varchar(10), 
+Issue_type varchar(3), 
+issue_detail varchar(50), 
+status varchar(6), 
+constraint pk_call_center primary key (Issue_Num)
+); 
+
+
+Create table receive_calls ( 
+Issue_Num number(5),
+employeeID number(6),
+constraint pk_receive_calls primary key (Issue_Num, employeeID),
+constraint fk_issue_num3 foreign key (issue_num) REFERENCES Call_center(issue_num),
+constraint fk_empId4 foreign key (employeeID) REFERENCES Uber_Employees_Office(employeeID)
+)
+; 
+
+
+create table Monitor ( 
+acct_num NUMBER(15),
+employeeID number(6),
+constraint pk_monitor primary key (acct_num, employeeID),
+constraint fk_empId5 foreign key (employeeID) REFERENCES Uber_Employees_Office(employeeID),
+constraint fk_acct_num6 foreign key (acct_num) REFERENCES Accounts(acct_num)
+); 
+
+
+commit;
